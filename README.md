@@ -3,9 +3,9 @@
 This fork adds support for ONLY Fi Light app based LED BLE lights. If you have any issues please raise and I will try to help you out.
 Forked from sysofwan/ha-triones - I have changed the bytes that are sent to the lights to change the colour, and changed how the bytes are read (for status updates on the lights, if a remote is used to change them, it should update in Home Assistant).
 
-Home Assistant integration for BLE based Triones or HappyLighting lights.
+<s>Home Assistant integration for BLE based Triones or HappyLighting lights.</s>
 
-Supports controlling BLE based lights controllable through the Triones or HappyLighting apps.
+Supports controlling BLE based lights controllable through the <s>Triones or HappyLighting</s> Fi Light app<s>s</s>.
 
 ## Installation
 
