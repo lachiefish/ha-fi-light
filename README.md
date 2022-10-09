@@ -1,7 +1,7 @@
-# ha-triones
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/sysofwan/ha-triones)
-![Hassfest](https://github.com/sysofwan/ha-triones/actions/workflows/hassfest.yaml/badge.svg)
-![HACS](https://github.com/sysofwan/ha-triones/actions/workflows/hacs.yml/badge.svg)
+# ha-triones (Forked for Fi Light BLE Lights)
+
+This fork adds support for ONLY Fi Light app based LED BLE lights. If you have any issues please raise and I will try to help you out.
+Forked from sysofwan/ha-triones - I have changed the bytes that are sent to the lights to change the colour, and changed how the bytes are read (for status updates on the lights, if a remote is used to change them, it should update in Home Assistant).
 
 Home Assistant integration for BLE based Triones or HappyLighting lights.
 
@@ -10,6 +10,10 @@ Supports controlling BLE based lights controllable through the Triones or HappyL
 ## Installation
 
 Note: Restart is always required after installation.
+
+If you want to clone from HACS, either clone this repo and set up as describled below, or clone the original repo (sysofwan/ha-triones) and replace the 'triones.py' file with mine.
+
+This fork should auto-discover any light that advertises with the name "Magic-xxxx..." 
 
 ### [HACS](https://hacs.xyz/) (recommended)
 Installation can be done through [HACS custom repository](https://hacs.xyz/docs/faq/custom_repositories).
@@ -20,7 +24,7 @@ You can manually clone this repository inside `config/custom_components/triones`
 For  example, from Terminal plugin:
 ```
 cd /config/custom_components
-git clone https://github.com/sysofwan/ha-triones triones
+git clone https://github.com/lachiefish/ha-fi-light triones
 ```
 
 ## Setup
@@ -58,3 +62,4 @@ logger:
 
 ## Credits
 This integration will not be possible without the awesome work of reverse engineering and documenting the Triones BLE protocol [here](https://github.com/madhead/saberlight/blob/master/protocols/Triones/protocol.md).
+Forked from sysofwan/ha-triones.
